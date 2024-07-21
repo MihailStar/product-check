@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="viking-labs" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="none">
+  <meta name="format-detection" content="email=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Check | Viking Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&amp;family=Poppins:wght@300;400;500&amp;display=swap">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="./images/favicons/favicon.ico">
+  <link href="./styles/main.css" rel="stylesheet">
+</head>
+
+<body class="viking-labs__body">
+  <div class="background js-background">
+    <div class="background__images" style="transform: translate(0, 0)"></div>
+  </div>
+  <div class="viking-labs__header">
+    <header class="header">
+      <div class="wrapper">
+        <div class="wrapper__row">
+          <div class="header__logotype"><a class="logotype" href="#"><img class="logotype__image" src="./images/logotype.svg" alt="logotype" width="221" height="49" /></a></div>
+          <div class="header__feedback">
+            <ul class="feedback">
+              <li class="feedback__item"><a class="feedback__link feedback__link_email" href="#" aria-label="EMail"><svg class="icon icon_email" aria-hidden="true" focusable="false" width="20" height="14">
+                    <use href="images/sprite/sprite.svg#icon-email" />
+                  </svg></a></li>
+              <li class="feedback__item"><a class="feedback__link feedback__link_telegram" href="#" aria-label="Telegram"><svg class="icon icon_telegram" aria-hidden="true" focusable="false" width="18" height="18">
+                    <use href="images/sprite/sprite.svg#icon-telegram" />
+                  </svg></a></li>
+              <li class="feedback__item"><a class="feedback__link feedback__link_whatsapp" href="#" aria-label="WhatsApp"><svg class="icon icon_whatsapp" aria-hidden="true" focusable="false" width="20" height="20">
+                    <use href="images/sprite/sprite.svg#icon-whatsapp" />
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="viking-labs__product-check">
+    <main class="product-check">
+      <div class="wrapper">
+        <div class="wrapper__row">
+          <div class="product-check__content">
+            <h1 class="product-check__title">Viking Labs</h1>
+            <h2 class="product-check__subtitle">Product Check</h2>
+            <p class="product-check__description">Want to verify that you have an original product?</p>
+            <div class="product-check__verification">
+              <form class="verification js-verification" method="post" data-okay-message="Code found" data-warning-message="The code was found, but was checked earlier" data-error-message="Code not found" data-invalid-message="Code is invalid">
+                <div class="verification__input-wrapper"><label class="verification__label verification__label_visually-hidden" for="awiy2aw7be4a56a37wt6">Enter your product code</label><input class="verification__input" id="awiy2aw7be4a56a37wt6" type="text" placeholder="Enter your product code" /></div>
+                <div class="verification__button-wrapper">
+                  <div class="verification__button"><button class="button" type="submit"><svg class="icon icon_loader" aria-hidden="true" focusable="false" width="16" height="16">
+                        <use href="images/sprite/sprite.svg#icon-loader" />
+                      </svg><span>Verify product</span></button></div>
+                </div>
+                <div class="verification__snackbar">
+                  <div class="snackbar snackbar_hidden snackbar_transparent js-snackbar" role="status" aria-live="polite"><span class="snackbar__icon"><svg class="icon icon_okay" aria-hidden="true" focusable="false" width="14" height="10">
+                        <use href="images/sprite/sprite.svg#icon-okay" />
+                      </svg><svg class="icon icon_error" aria-hidden="true" focusable="false" width="10" height="10">
+                        <use href="images/sprite/sprite.svg#icon-error" />
+                      </svg></span><span></span></div>
+                </div>
+              </form>
+            </div>
+            <div class="product-check__faq">
+              <div class="handorgel js-faq">
+                <h3 class="handorgel__header"><button class="handorgel__header__button">What should I do if I have a problem with a code?</button></h3>
+                <div class="handorgel__content">
+                  <div class="handorgel__content__inner">
+                    <p class="handorgel__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus, dolores nesciunt nam cum veniam dolorem earum, perspiciatis ab, quo est fugit excepturi optio incidunt autem consequuntur quibusdam doloribus eos</p>
+                  </div>
+                </div>
+                <hr class="handorgel__hr" />
+                <h3 class="handorgel__header"><button class="handorgel__header__button">Can the code already be checked by someone before?</button></h3>
+                <div class="handorgel__content">
+                  <div class="handorgel__content__inner">
+                    <p class="handorgel__description">Yes, if you buy the product not directly from us, but from another shop - their staff may have verified the code. You can contact us to confirm whether our product is supplied to this store or not</p>
+                  </div>
+                </div>
+                <hr class="handorgel__hr" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="viking-labs__footer">
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="wrapper__row">
+          <div class="footer__language">
+            <form class="language js-language" method="post"><label class="language__label language__label_visually-hidden" for="sf8zm03ix9dueunv3zmi">Choose language</label><select class="language__select" id="sf8zm03ix9dueunv3zmi">
+                <option class="language__option" disabled="disabled">Choose language</option>
+                <option class="language__option" value="pt">Português</option>
+                <option class="language__option" value="ar">عرب</option>
+                <option class="language__option" value="es">Español</option>
+                <option class="language__option" value="ru">Русский</option>
+                <option class="language__option" value="en" selected="selected">English</option>
+              </select>
+              <div class="language__icon"><svg class="icon icon_earth" aria-hidden="true" focusable="false" width="22" height="22">
+                  <use href="images/sprite/sprite.svg#icon-earth" />
+                </svg></div>
+            </form>
+          </div>
+          <div class="footer__copyright">
+            <p class="copyright">© Viking Labs 2023</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./scripts/main.js" defer></script>
+</body>
+
+</html>
