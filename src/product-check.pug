@@ -1,0 +1,46 @@
+extends ./templates/main.pug
+
+block variables
+  -
+    const pageClass = 'viking-labs';
+    const pageTitle = 'Product Check | Viking Labs';
+
+    const documentLanguage = void 0;
+    const isVisibleForRobots = void 0;
+    const pageDescription = void 0;
+    const pageKeyword = void 0;
+
+block head
+  link(rel="preconnect", href="https://fonts.googleapis.com")
+  link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+  link(
+    rel="stylesheet",
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Poppins:wght@300;400;500&display=swap"
+  )
+  link(
+    rel="apple-touch-icon",
+    sizes="180x180",
+    href="./images/favicons/apple-touch-icon.png"
+  )
+  link(
+    rel="icon",
+    type="image/png",
+    sizes="32x32",
+    href="./images/favicons/favicon-32x32.png"
+  )
+  link(
+    rel="icon",
+    type="image/png",
+    sizes="16x16",
+    href="./images/favicons/favicon-16x16.png"
+  )
+  link(rel="icon", type="image/x-icon", href="./images/favicons/favicon.ico")
+
+block body
+  +background
+  .viking-labs__header
+    +header
+  .viking-labs__product-check
+    +product-check
+  .viking-labs__footer
+    +footer

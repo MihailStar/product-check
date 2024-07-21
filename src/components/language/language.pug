@@ -1,0 +1,24 @@
+include ../../templates/utilities/get-random-double-id.pug
+include ../icon/icon.pug
+
+mixin language
+  -
+    /** @tutorial https://ru.wikipedia.org/wiki/Коды_языков */
+    const items = [
+      { title: 'Português', value: 'pt' },
+      { title: 'عرب', value: 'ar' },
+      { title: 'Español', value: 'es' },
+      { title: 'Русский', value: 'ru' },
+      { title: 'English', value: 'en', isSelected: true },
+    ];
+
+  form.language.js-language(method="post")
+    label.language__label.language__label_visually-hidden(
+      for=getRandomDoubleId()
+    ) Choose language
+    select.language__select(id=getRandomDoubleId())
+      option.language__option(disabled) Choose language
+      each item in items
+        option.language__option(value=item.value, selected=item.isSelected)= item.title
+    .language__icon
+      +icon('earth')(width="22", height="22")

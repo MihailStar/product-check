@@ -1,0 +1,33 @@
+include ./get-random-int.pug
+
+-
+  function getRandomId(options = {}) {
+    const defaultOptions = {
+      length: 20,
+      uppercase: false,
+      lowercase: true,
+      numbers: true,
+      symbols: false,
+    };
+
+    const currentOptions = Object.assign({}, defaultOptions, options);
+
+    const defaultChars = {
+      uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      lowercase: 'abcdefghijklmnopqrstuvwxyz',
+      numbers: '0123456789',
+      symbols: '!@#$%^&*',
+    };
+
+    const currentChars = Object.keys(defaultChars).reduce(
+      (acc, key) => acc + (currentOptions[key] ? defaultChars[key] : ''),
+      ''
+    );
+
+    const randomId = Array.from(
+      { length: currentOptions.length },
+      () => currentChars[getRandomInt(0, currentChars.length - 1)]
+    ).join('');
+
+    return randomId;
+  }

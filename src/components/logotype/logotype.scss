@@ -1,0 +1,19 @@
+@use '../../styles/variables.scss';
+
+.logotype {
+  display: block;
+  width: 221px;
+  height: 49px;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 300ms;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &__image {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "dictionary": [],
+  "excludeFiles": ["dist", "node_modules"],
+  "fileExtensions": [".css", ".js", ".pug", ".scss", ".ts"]
+}

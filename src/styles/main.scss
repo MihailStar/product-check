@@ -1,0 +1,66 @@
+@use 'sass:math';
+@use './variables.scss';
+@use '../components/background/background';
+@use '../components/footer/footer.scss';
+@use '../components/header/header.scss';
+@use '../components/product-check/product-check';
+
+.viking-labs {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+      box-sizing: border-box;
+    }
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 100vh;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    background-color: variables.$background-color-light;
+
+    @media (width >= 375px) {
+      background:
+        url('../images/viking-s-1.svg') top 172px left (-76px - 10px) no-repeat,
+        url('../images/viking-s-2.svg') top 124px right (-46px - 10px) no-repeat;
+    }
+
+    @media (width >= 768px) {
+      background:
+        url('../images/viking-s-1.svg') top 184px left -76px / #{math.div(
+            math.round(math.div(261, 768) * 100),
+            100
+          ) * 100%} no-repeat,
+        url('../images/viking-s-2.svg') top 136px right -46px / #{math.div(
+            math.round(math.div(234, 768) * 100),
+            100
+          ) * 100%} no-repeat;
+    }
+
+    @media (width >= 1200px) {
+      background: none;
+    }
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__product-check {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+}

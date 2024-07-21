@@ -1,0 +1,132 @@
+@use 'sass:math';
+@use '../../styles/variables.scss';
+
+// @tutorial ../../../node_modules/handorgel/src/scss/style.scss
+.handorgel {
+  width: 100%;
+
+  &__header {
+    padding-top: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: variables.$background-color-light;
+  }
+
+  &__header__button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 22px;
+    padding-right: 18px;
+    padding-bottom: 22px;
+    padding-left: 0;
+    // Для ровного focus'а
+    overflow-x: hidden;
+    font-family: variables.$text-font-family;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: variables.$main-color-dark;
+    text-align: left;
+    cursor: pointer;
+    /* user-select: none; */
+    background-color: variables.$background-color-light;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+
+    @media (width >= 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    &::after {
+      position: absolute;
+      top: (22px + math.div((30px - 18px), 2));
+      right: 0;
+      width: 18px;
+      height: 18px;
+      content: '';
+      background: linear-gradient(
+          to top,
+          transparent 0 8px,
+          variables.$main-color-dark 8px 10px,
+          transparent 10px 18px
+        ),
+        linear-gradient(
+          to left,
+          transparent 0 8px,
+          variables.$main-color-dark 8px 10px,
+          transparent 10px 18px
+        );
+      transition: transform 300ms;
+      transform: rotate(0deg);
+
+      @media (width >= 768px) {
+        top: (32px + math.div((30px - 18px), 2));
+      }
+    }
+  }
+
+  &__header__button_with-rotated-icon {
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__content {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    background-color: variables.$background-color-light;
+    transition: height 100ms ease 100ms;
+  }
+
+  &__content_open {
+    display: block;
+    transition: height 200ms ease;
+  }
+
+  &__content_opened {
+    overflow: visible;
+  }
+
+  &__content__inner {
+    padding-top: 0;
+    padding-bottom: 22px;
+    background-color: variables.$background-color-light;
+    opacity: 0;
+    transition: opacity 100ms ease;
+
+    .handorgel__content_opened & {
+      opacity: 1;
+      transition: opacity 300ms ease;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-family: variables.$text-font-family;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: variables.$text-color-dark;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__hr {
+    height: 2px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    background-color: #afafaf;
+    border: 0;
+  }
+}

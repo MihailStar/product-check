@@ -1,0 +1,9 @@
+mixin snackbar
+  .snackbar.snackbar_hidden.snackbar_transparent.js-snackbar(
+    role="status",
+    aria-live="polite"
+  )
+    span.snackbar__icon
+      +icon('okay')(width="14", height="10")
+      +icon('error')(width="10", height="10")
+    span

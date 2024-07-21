@@ -1,0 +1,25 @@
+mixin faq
+  -
+    const items = [
+      {
+        question: 'What should I do if I have a problem with a code?',
+        answer:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus, dolores nesciunt nam cum veniam dolorem earum, perspiciatis ab, quo est fugit excepturi optio incidunt autem consequuntur quibusdam doloribus eos',
+      },
+      {
+        question: 'Can the code already be checked by someone before?',
+        answer:
+          'Yes, if you buy the product not directly from us, but from another shop - their staff may have verified the code. You can contact us to confirm whether our product is supplied to this store or not',
+      },
+    ];
+
+  .handorgel.js-faq
+    each item in items
+      h3.handorgel__header
+        button.handorgel__header__button(
+          class=item.isOpened && "handorgel__header__button_with-rotated-icon"
+        )= item.question
+      .handorgel__content(data-open=item.isOpened)
+        .handorgel__content__inner
+          p.handorgel__description= item.answer
+      hr.handorgel__hr

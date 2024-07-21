@@ -1,0 +1,43 @@
+@use '../../styles/variables.scss';
+@use '../feedback/feedback.scss';
+@use '../logotype/logotype.scss';
+@use '../wrapper/wrapper.scss';
+
+.header {
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  @media (width >= 768px) {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+
+  &__logotype,
+  &__feedback {
+    @extend %wrapper__column;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media (width >= 768px) {
+      width: 50%;
+    }
+  }
+
+  &__logotype {
+    margin-bottom: 12px;
+
+    @media (width >= 768px) {
+      justify-content: start;
+      margin-bottom: 0;
+    }
+  }
+
+  &__feedback {
+    align-items: end;
+
+    @media (width >= 768px) {
+      justify-content: end;
+    }
+  }
+}

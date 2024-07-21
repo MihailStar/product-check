@@ -1,0 +1,15 @@
+include ../faq/faq.pug
+include ../verification/verification.pug
+include ../wrapper/wrapper.pug
+
+mixin product-check
+  main.product-check
+    +wrapper
+      .product-check__content
+        h1.product-check__title Viking Labs
+        h2.product-check__subtitle Product Check
+        p.product-check__description Want to verify that you have an original product?
+        .product-check__verification
+          +verification
+        .product-check__faq
+          +faq

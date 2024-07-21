@@ -1,0 +1,11 @@
+include ../copyright/copyright.pug
+include ../language/language.pug
+include ../wrapper/wrapper.pug
+
+mixin footer
+  footer.footer
+    +wrapper
+      .footer__language
+        +language
+      .footer__copyright
+        +copyright

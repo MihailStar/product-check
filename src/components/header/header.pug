@@ -1,0 +1,11 @@
+include ../feedback/feedback.pug
+include ../logotype/logotype.pug
+include ../wrapper/wrapper.pug
+
+mixin header
+  header.header
+    +wrapper
+      .header__logotype
+        +logotype
+      .header__feedback
+        +feedback

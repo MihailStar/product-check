@@ -1,0 +1,37 @@
+%wrapper,
+.wrapper {
+  min-width: 320px;
+  max-width: ((70px + 30px) * 12);
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (width >= (375px + 5px * 2)) {
+    padding-right: (10px + 5px);
+    padding-left: (10px + 5px);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+
+    @media (width >= (375px + 5px * 2)) {
+      margin-right: -(10px + 5px);
+      margin-left: -(10px + 5px);
+    }
+  }
+
+  &__column {
+    flex-grow: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    @media (width >= (375px + 5px * 2)) {
+      padding-right: (10px + 5px);
+      padding-left: (10px + 5px);
+    }
+  }
+}

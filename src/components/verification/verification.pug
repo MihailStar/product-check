@@ -1,0 +1,29 @@
+include ../../templates/utilities/get-random-double-id.pug
+include ../button/button.pug
+include ../icon/icon.pug
+include ../snackbar/snackbar.pug
+
+mixin verification
+  form.verification.js-verification(
+    method="post",
+    data-okay-message="Code found",
+    data-warning-message="The code was found, but was checked earlier",
+    data-error-message="Code not found",
+    data-invalid-message="Code is invalid"
+  )
+    .verification__input-wrapper
+      label.verification__label.verification__label_visually-hidden(
+        for=getRandomDoubleId()
+      ) Enter your product code
+      input.verification__input(
+        id=getRandomDoubleId(),
+        type="text",
+        placeholder="Enter your product code"
+      )
+    .verification__button-wrapper
+      .verification__button
+        +button(type="submit")
+          +icon('loader')(width="16", height="16")
+          span Verify product
+    .verification__snackbar
+      +snackbar

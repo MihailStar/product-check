@@ -1,0 +1,19 @@
+include ../icon/icon.pug
+
+mixin feedback
+  -
+    const items = [
+      { title: 'EMail', href: '#', icon: 'email', size: [20, 14] },
+      { title: 'Telegram', href: '#', icon: 'telegram', size: [18, 18] },
+      { title: 'WhatsApp', href: '#', icon: 'whatsapp', size: [20, 20] },
+    ];
+
+  ul.feedback
+    each item in items
+      li.feedback__item
+        a.feedback__link(
+          class=`feedback__link_${item.icon}`,
+          href=item.href,
+          aria-label=item.title
+        )
+          +icon(item.icon)(width=item.size[0], height=item.size[1])

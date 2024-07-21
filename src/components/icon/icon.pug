@@ -1,0 +1,6 @@
+mixin icon(name)
+  -
+    const iconName = name.toLowerCase();
+
+  svg.icon(class=`icon_${iconName}`, aria-hidden="true", focusable="false")&attributes(attributes)
+    use(href=`images/sprite/sprite.svg#icon-${iconName}`)/

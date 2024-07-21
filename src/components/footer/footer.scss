@@ -1,0 +1,43 @@
+@use '../../styles/variables.scss';
+@use '../copyright/copyright.scss';
+@use '../language/language.scss';
+@use '../wrapper/wrapper.scss';
+
+.footer {
+  padding-top: 14px;
+  padding-bottom: (14px + 8px);
+  background-color: variables.$background-color-dark;
+
+  @media (width >= 768px) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  &__language,
+  &__copyright {
+    @extend %wrapper__column;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media (width >= 768px) {
+      width: 50%;
+    }
+  }
+
+  &__language {
+    @media (width >= 768px) {
+      justify-content: end;
+      order: 1;
+    }
+  }
+
+  &__copyright {
+    align-items: center;
+
+    @media (width >= 768px) {
+      justify-content: start;
+      order: -1;
+    }
+  }
+}
